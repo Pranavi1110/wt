@@ -1,0 +1,11 @@
+FEEDBACK/
+│
+├── feedback.html
+├── feedback.jsp
+├── FeedBackServlet.java
+│
+└── WEB-INF/
+    ├── web.xml
+    │
+    └── classes/
+        └── FeedbackServlet.class
