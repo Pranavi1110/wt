@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+
+<laptops>
+
+ <laptop>
+  <brand>Dell</brand>
+  <model>XPS</model>
+  <price>100000</price>
+  <processor>i7</processor>
+ </laptop>
+
+ <laptop>
+  <brand>HP</brand>
+  <model>Pavilion</model>
+  <price>70000</price>
+  <processor>i5</processor>
+ </laptop>
+
+ <laptop>
+  <brand>Lenovo</brand>
+  <model>ThinkPad</model>
+  <price>90000</price>
+  <processor>i7</processor>
+ </laptop>
+
+ <laptop>
+  <brand>Asus</brand>
+  <model>ROG</model>
+  <price>120000</price>
+  <processor>i9</processor>
+ </laptop>
+
+ <laptop>
+  <brand>Acer</brand>
+  <model>Aspire</model>
+  <price>60000</price>
+  <processor>i5</processor>
+ </laptop>
+
+</laptops>

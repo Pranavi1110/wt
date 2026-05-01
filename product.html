@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <title>Product Billing</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function calculateBill() {
+            let prices = [200, 250, 150, 100];
+            let total = 0;
+            for (let i = 1; i <= 4; i++) {
+                let qty = parseInt(document.getElementById("q" + i).value) || 0;
+                if (qty < 0) {
+                    alter("quantity cannot be negative");
+                    document.getElementById("q" + i).value = 0;
+                }
+                let subtotal = qty * prices[i - 1];
+                document.getElementById("s" + i).innerHTML = subtotal;
+                total += subtotal;
+            }
+            document.getElementById("total").innerHTML = total;
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Product Billing</h2>
+    <table border="1">
+        <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+        </tr>
+        <tr>
+            <td>Pizza</td>
+            <td>200</td>
+            <td><input type="number" id="q1" oninput="calculateBill()"></td>
+            <td id="s1"></td>
+        </tr>
+        <tr>
+            <td>Burger</td>
+            <td>250</td>
+            <td><input type="number" id="q2" oninput="calculateBill()"></td>
+            <td id="s2"></td>
+        </tr>
+        <tr>
+            <td>Sandwich</td>
+            <td>150</td>
+            <td><input type="number" id="q3" oninput="calculateBill()"></td>
+            <td id="s3"></td>
+        </tr>
+        <tr>
+            <td>Fries</td>
+            <td>100</td>
+            <td><input type="number" id="q4" oninput="calculateBill()"></td>
+            <td id="s4"></td>
+        </tr>
+        <tr>
+            <td colspan="3">Total</td>
+            <td id="total"></td>
+        </tr>
+    </table>
+</body>
+
+</html>

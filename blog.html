@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Blog Website</title>
+
+    <style>
+        /* Base styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+            background: #ffffff;
+            color: #111111;
+        }
+
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .toggle-btn {
+            margin-top: 10px;
+            padding: 8px 12px;
+            cursor: pointer;
+            border: 0;
+            border-radius: 6px;
+        }
+
+        nav {
+            background: #333;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        nav li {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            display: block;
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background: #575757;
+        }
+
+        .container {
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        main {
+            flex: 3;
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        aside {
+            flex: 1;
+            background: #eaeaea;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #333;
+            color: white;
+            margin-top: 20px;
+        }
+
+        /* Dark mode styles (applied when body has class="dark-mode") */
+        body.dark-mode {
+            background-color: #121212;
+            color: #f1f1f1;
+        }
+
+        body.dark-mode header {
+            background: #2e7d32;
+        }
+
+        body.dark-mode nav {
+            background: #1f1f1f;
+        }
+
+        body.dark-mode nav a:hover {
+            background: #2b2b2b;
+        }
+
+        body.dark-mode main {
+            background: #1e1e1e;
+        }
+
+        body.dark-mode aside {
+            background: #2a2a2a;
+        }
+
+        body.dark-mode footer {
+            background: #1f1f1f;
+        }
+
+        /* Make it stack on small screens */
+        @media (max-width: 700px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>My Blog Website</h1>
+        <button class="toggle-btn" onclick="toggleBtn()">Toggle Light / Dark Mode</button>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <main>
+            <h2>Welcome to My Blog</h2>
+            <p>
+                This is a simple blog website created for demonstration purposes. Here you can
+                find various articles and posts on different topics. Stay tuned for more updates!
+            </p>
+        </main>
+
+        <aside>
+            <h3>Sidebar</h3>
+            <p>Recent posts</p>
+            <p>Categories</p>
+        </aside>
+    </div>
+
+    <footer>
+        &copy; 2026 My Blog Website
+    </footer>
+
+    <script>
+        function toggleBtn() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+
+</html>

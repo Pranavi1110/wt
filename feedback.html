@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Feedback</title>
+
+    <script>
+        function validate() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let course = document.getElementById("course").value;
+            let rating = document.querySelector('input[name="rating"]:checked');
+
+            let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+            if (name == "") {
+                alert("Enter Name");
+                return false;
+            }
+
+            if (!email.match(pattern)) {
+                alert("Enter valid Email");
+                return false;
+            }
+
+            if (course == "") {
+                alert("Select Course");
+                return false;
+            }
+
+            if (rating == null) {
+                alert("Select Rating");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <form action="FeedbackServlet" method="post" onsubmit="return validate()">
+
+        <h2>Feedback Form</h2>
+
+        Name: <input type="text" id="name" name="name"><br><br>
+
+        Email: <input type="text" id="email" name="email"><br><br>
+
+        Course:
+        <select id="course" name="course">
+            <option value="">Select</option>
+            <option>Java</option>
+            <option>Python</option>
+        </select><br><br>
+
+        Rating:
+        <input type="radio" name="rating" value="1">1
+        <input type="radio" name="rating" value="2">2
+        <input type="radio" name="rating" value="3">3
+        <input type="radio" name="rating" value="4">4
+        <input type="radio" name="rating" value="5">5
+        <br><br>
+
+        <input type="submit">
+
+    </form>
+
+</body>
+
+</html>

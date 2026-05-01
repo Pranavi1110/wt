@@ -1,0 +1,72 @@
+/* Marks Calculator - basic clean styling */
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f6f8fc;
+    color: #111;
+    margin: 0;
+    padding: 24px;
+}
+
+h2 {
+    text-align: center;
+    margin: 10px 0 24px;
+}
+
+label {
+    display: inline-block;
+    width: 90px;
+    font-weight: 600;
+}
+
+input[type="number"] {
+    width: 160px;
+    padding: 8px 10px;
+    border: 1px solid #c8c8c8;
+    border-radius: 6px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #2f6fed;
+    box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.18);
+}
+
+button {
+    display: block;
+    margin: 10px auto 0;
+    padding: 10px 16px;
+    border: 0;
+    border-radius: 8px;
+    background: #2f6fed;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2559c7;
+}
+
+#resultTable {
+    width: min(700px, 95%);
+    margin: 20px auto 0;
+}
+
+#resultTable table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+#resultTable th,
+#resultTable td {
+    border: 1px solid #d0d0d0;
+    padding: 12px 10px;
+    text-align: center;
+}
+
+#resultTable th {
+    background: #2f6fed;
+    color: #fff;
+}
